@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Sophie Pouget-Leroy — Ostéopathe animalier, formatrice, penseuse</title>
+  <meta name="description" content="Ostéopathe animalier et technicien dentaire équin, Sophie Pouget-Leroy partage ses réflexions sur la pratique, le corps et la transmission. Écrits de terrain sur pouget-leroy.fr">
+  <meta name="author" content="Sophie Pouget-Leroy">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pouget-leroy.fr">
+
+  <!-- Open Graph (partage réseaux sociaux) -->
+  <meta property="og:title" content="Sophie Pouget-Leroy — Ostéopathe animalier, formatrice, penseuse">
+  <meta property="og:description" content="Écrits de terrain — chroniques, cas cliniques, résonances. Ostéopathe animalier et technicien dentaire équin.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pouget-leroy.fr">
+  <meta property="og:locale" content="fr_FR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f2ede8; font-family: 'Jost', sans-serif; color: #3a3835; }
+
+    .line { border: none; border-top: 0.5px solid #b8b3ac; }
+
+    /* NAV */
+    nav { background: #f2ede8; padding: 20px 56px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
+    .nav-name { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 19px; letter-spacing: 0.03em; cursor: pointer; }
+    .nav-links { display: flex; gap: 36px; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #6b6760; }
+    .nav-link { cursor: pointer; padding-bottom: 2px; border-bottom: 0.5px solid transparent; transition: all 0.2s; }
+    .nav-link:hover { color: #3a3835; border-bottom-color: #3a3835; }
+    .nav-link.active { color: #3a3835; border-bottom-color: #3a3835; }
+    .nav-toggle { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .nav-toggle span { display: block; width: 22px; height: 1px; background: #3a3835; }
+
+    /* PAGES */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ===== PAGE ACCUEIL ===== */
+
+    /* HERO */
+    .hero { display: grid; grid-template-columns: 1fr 1fr; height: 380px; }
+    .hero-text { background: #f2ede8; padding: 48px 56px; display: flex; flex-direction: column; justify-content: center; }
+    .hero-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 56px; line-height: 1.05; color: #3a3835; }
+    .hero-meta { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #a09a93; margin-top: 24px; }
+    .hero-photo { background: #c4b5a5; overflow: hidden; height: 380px; }
+    .hero-photo-placeholder { text-align: center; color: #8a7a6a; }
+    .hero-photo-placeholder svg { opacity: 0.3; display: block; margin: 0 auto 10px; }
+    .hero-photo-placeholder span { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.5; display: block; }
+
+    /* RUBRIQUES */
+    .rubriques { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+    .rubrique { padding: 32px 56px 40px; border-right: 0.5px solid #b8b3ac; cursor: pointer; transition: filter 0.15s; }
+    .rubrique:last-child { border-right: none; }
+    .rubrique:hover { filter: brightness(0.96); }
+    .rub-penser { background: #e0cfc6; }
+    .rub-toucher { background: #ccd4c2; }
+    .rub-resonances { background: #d8d0c4; }
+    .rub-bar { height: 2px; width: 28px; margin-bottom: 22px; }
+    .rub-penser .rub-bar { background: #b89a8c; }
+    .rub-toucher .rub-bar { background: #8a9e84; }
+    .rub-resonances .rub-bar { background: #a09480; }
+    .rub-num { font-size: 10px; letter-spacing: 0.2em; color: #8a847d; margin-bottom: 10px; }
+    .rub-title { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 300; color: #3a3835; margin-bottom: 10px; }
+    .rub-desc { font-size: 12px; color: #5a5653; line-height: 1.75; }
+
+    /* ARTICLES */
+    .articles-zone { background: #ffffff; padding: 52px 56px; }
+    .section-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #a09a93; margin-bottom: 36px; }
+    .article-card { display: grid; grid-template-columns: 130px 1fr; gap: 32px; padding: 28px 0; border-top: 0.5px solid #e4dfd8; align-items: start; }
+    .article-img { height: 88px; border-radius: 2px; display: flex; align-items: center; justify-content: center; }
+    .article-img svg { opacity: 0.25; }
+    .img-penser { background: #e0cfc6; }
+    .img-toucher { background: #ccd4c2; }
+    .img-resonances { background: #d8d0c4; }
+    .art-rub { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: #a09a93; margin-bottom: 8px; }
+    .art-title { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: #3a3835; margin-bottom: 10px; line-height: 1.2; }
+    .art-excerpt { font-size: 13px; color: #6b6760; line-height: 1.8; }
+
+    /* ===== PAGE ARTICLE ===== */
+    .article-header { background: #f2ede8; padding: 64px 56px 48px; }
+    .article-header-rub { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #a09a93; margin-bottom: 20px; }
+    .article-header-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 52px; line-height: 1.1; color: #3a3835; margin-bottom: 20px; }
+    .article-header-date { font-size: 11px; color: #a09a93; letter-spacing: 0.08em; }
+    .article-body { background: #ffffff; padding: 64px 0; }
+    .article-body-inner { max-width: 680px; margin: 0 auto; padding: 0 56px; }
+    .article-body p { font-size: 17px; color: #3a3835; line-height: 2.1; margin-bottom: 32px; font-family: 'Cormorant Garamond', serif; font-weight: 300; }
+    .article-body p:last-child { margin-bottom: 0; }
+    .article-back { background: #f2ede8; padding: 28px 56px; }
+    .article-back span { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #8a847d; cursor: pointer; border-bottom: 0.5px solid transparent; transition: all 0.2s; }
+    .article-back span:hover { color: #3a3835; border-bottom-color: #3a3835; }
+
+    /* ===== PAGE À PROPOS ===== */
+    .apropos-hero { display: grid; grid-template-columns: 1fr 1fr; height: 380px; overflow: hidden; }
+    .apropos-photo { background: #c4b5a5; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; }
+    .apropos-photo svg { opacity: 0.3; }
+    .apropos-photo span { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7a6a; opacity: 0.5; }
+    .apropos-intro { background: #f2ede8; padding: 64px 56px; display: flex; flex-direction: column; justify-content: center; }
+    .apropos-intro h1 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 54px; line-height: 1.05; margin-bottom: 24px; color: #3a3835; }
+    .apropos-intro p { font-size: 11px; color: #6b6760; line-height: 2.2; letter-spacing: 0.04em; }
+
+    .apropos-text { background: #ffffff; padding: 72px 0; }
+    .apropos-text-inner { max-width: 680px; margin: 0 auto; padding: 0 56px; }
+    .apropos-text p { font-size: 17px; color: #3a3835; line-height: 2.1; margin-bottom: 36px; font-family: 'Cormorant Garamond', serif; font-weight: 300; }
+    .apropos-text p:last-child { margin-bottom: 0; }
+
+    .apropos-credits { background: #f2ede8; padding: 48px 56px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; }
+    .credit-label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #a09a93; margin-bottom: 16px; }
+    .credit-item { font-size: 12px; color: #5a5653; line-height: 2.1; }
+
+    /* FOOTER */
+    footer { background: #f2ede8; padding: 24px 56px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 300; font-style: italic; color: #8a847d; }
+    .footer-right { display: flex; align-items: center; gap: 24px; }
+    .footer-domain { font-size: 10px; letter-spacing: 0.15em; color: #a09a93; }
+    .footer-linkedin { font-size: 10px; letter-spacing: 0.15em; color: #a09a93; text-decoration: none; border-bottom: 0.5px solid transparent; transition: all 0.2s; }
+    .footer-linkedin:hover { color: #3a3835; border-bottom-color: #3a3835; }
+
+    /* ===== RESPONSIVE MOBILE ===== */
+    @media (max-width: 768px) {
+
+      /* Nav mobile */
+      nav { padding: 16px 24px; position: relative; }
+      .nav-links { display: none; flex-direction: column; gap: 20px; position: absolute; top: 100%; left: 0; right: 0; background: #f2ede8; padding: 24px; border-top: 0.5px solid #b8b3ac; z-index: 20; }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: flex; }
+
+      /* Hero mobile — colonne unique, photo en second */
+      .hero { grid-template-columns: 1fr; }
+      .hero-text { padding: 48px 24px 40px; }
+      .hero-title { font-size: 44px; }
+      .hero-photo { min-height: 180px; }
+
+      /* Rubriques mobile — empilement */
+      .rubriques { grid-template-columns: 1fr; }
+      .rubrique { padding: 28px 24px; border-right: none; border-bottom: 0.5px solid #b8b3ac; }
+      .rubrique:last-child { border-bottom: none; }
+
+      /* Articles mobile */
+      .articles-zone { padding: 36px 24px; }
+      .article-card { grid-template-columns: 80px 1fr; gap: 16px; padding: 20px 0; }
+      .article-img { height: 64px; }
+      .art-title { font-size: 20px; }
+
+      /* Article mobile */
+      .article-header { padding: 40px 24px 32px; }
+      .article-header-title { font-size: 34px; }
+      .article-body-inner { padding: 0 24px; }
+      .article-body p { font-size: 15px; }
+      .article-back { padding: 20px 24px; }
+
+      /* À propos mobile */
+      .apropos-hero { grid-template-columns: 1fr; }
+      .apropos-photo { min-height: 240px; }
+      .apropos-intro { padding: 40px 24px; }
+      .apropos-intro h1 { font-size: 38px; }
+      .apropos-text-inner { padding: 0 24px; }
+      .apropos-text p { font-size: 15px; }
+      .apropos-credits { grid-template-columns: 1fr; gap: 32px; padding: 36px 24px; }
+
+      /* Footer mobile */
+      footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <hr class="line">
+  <nav>
+    <span class="nav-name" onclick="showPage('accueil')">Sophie Pouget-Leroy</span>
+    <div class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-links" id="nav-menu">
+      <span class="nav-link active" id="nav-accueil" onclick="showPage('accueil')">Accueil</span>
+      <span class="nav-link" id="nav-penser" onclick="showPage('penser')">Penser</span>
+      <span class="nav-link" id="nav-toucher" onclick="showPage('toucher')">Toucher</span>
+      <span class="nav-link" id="nav-resonances" onclick="showPage('resonances')">Résonances</span>
+      <span class="nav-link" id="nav-apropos" onclick="showPage('apropos')">À propos</span>
+      <span class="nav-link" id="nav-contact" onclick="showPage('contact')">Contact</span>
+    </div>
+  </nav>
+  <hr class="line">
+
+  <!-- PAGE ACCUEIL -->
+  <div class="page active" id="page-accueil">
+
+    <div class="hero">
+      <div class="hero-text">
+        <div>
+          <h1 class="hero-title">Ostéopathe.<br>Formatrice.<br>Penseuse.</h1>
+          <p class="hero-meta">Écrits de terrain — pouget-leroy.fr</p>
+        </div>
+      </div>
+      <div class="hero-photo" style="background:#c4b5a5;">
+        <img src="Via ferrata evolene jpeg.jpg" alt="Sophie Pouget-Leroy sur la via ferrata d'Evolène" style="width:100%; height:100%; object-fit:cover; object-position: center center; display:block;">
+      </div>
+    </div>
+
+    <hr class="line">
+
+    <div class="rubriques">
+      <div class="rubrique rub-penser">
+        <div class="rub-bar"></div>
+        <div class="rub-num">01</div>
+        <h2 class="rub-title">Penser</h2>
+        <p class="rub-desc">Essais, prises de position épistémiques, ce qui résiste à la simplification.</p>
+      </div>
+      <div class="rubrique rub-toucher">
+        <div class="rub-bar"></div>
+        <div class="rub-num">02</div>
+        <h2 class="rub-title">Toucher</h2>
+        <p class="rub-desc">Cas cliniques, observations terrain, ce que les mains savent avant le mot.</p>
+      </div>
+      <div class="rubrique rub-resonances">
+        <div class="rub-bar"></div>
+        <div class="rub-num">03</div>
+        <h2 class="rub-title">Résonances</h2>
+        <p class="rub-desc">Sources extérieures qui traversent, jazz, lecture, rencontres inattendues.</p>
+      </div>
+    </div>
+
+    <hr class="line">
+
+    <main class="articles-zone">
+      <p class="section-label">Derniers écrits</p>
+
+      <article class="article-card" onclick="showPage('article-osteopathes')" style="cursor:pointer;">
+        <div class="article-img img-penser" style="padding:0; overflow:hidden;">
+          <img src="matrice-tensegrale.svg" alt="Carte mentale matrice tenségrale" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block; opacity:0.85;">
+        </div>
+        <div>
+          <p class="art-rub">Penser</p>
+          <h2 class="art-title">Sommes-nous des ostéopathes ?</h2>
+          <p class="art-excerpt">Notre identité professionnelle ne se construit pas malgré les tensions qui la traversent. Elle tient par elles.</p>
+        </div>
+      </article>
+
+      <article class="article-card" onclick="showPage('article-sonny')" style="cursor:pointer;">
+        <div class="article-img img-resonances">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3a3835" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <p class="art-rub">Résonances</p>
+          <h2 class="art-title">Sonny Rollins et l'improvisation maîtrisée</h2>
+          <p class="art-excerpt">Ce que le jazz enseigne sur l'expertise incarnée. Et pourquoi le praticien qui ne sait plus où sont ses mains joue mieux que celui qui les surveille.</p>
+        </div>
+      </article>
+
+      <article class="article-card" onclick="showPage('article-humilite')" style="cursor:pointer;">
+        <div class="article-img img-penser">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3a3835" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="12" r="10"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div>
+          <p class="art-rub">Penser</p>
+          <h2 class="art-title">L'humilité de l'expert</h2>
+          <p class="art-excerpt">Quand un praticien aguerri ne trouve plus ses mots. Ce que ce silence révèle sur la construction de nos perceptions.</p>
+        </div>
+      </article>
+    </main>
+
+    <hr class="line">
+    <footer>
+      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin">LinkedIn</a>
+        <span class="footer-domain">pouget-leroy.fr</span>
+      </div>
+    </footer>
+    <hr class="line">
+  </div>
+
+  <!-- PAGE À PROPOS -->
+  <div class="page" id="page-apropos">
+
+    <div class="apropos-hero">
+      <div class="apropos-photo" style="padding:0; overflow:hidden;">
+        <img src="Sophie au kentucky.jpg" alt="Sophie Pouget-Leroy au Kentucky" style="width:100%; height:100%; object-fit:cover; object-position: center 40%; display:block;">
+      </div>
+      <div class="apropos-intro">
+        <h1>Sophie<br>Pouget-Leroy</h1>
+        <p>
+          Ostéopathe animalier OA247<br>
+          Technicien dentaire équin conventionné<br>
+          Formatrice<br>
+          Conférencière
+        </p>
+      </div>
+    </div>
+
+    <hr class="line">
+
+    <div class="apropos-text">
+      <div class="apropos-text-inner">
+        <p>Il y a des moments, en consultation, où tout s'arrête. Le cheval cesse de résister. Les mains trouvent ce qu'elles cherchaient sans qu'on leur ait dit où chercher. Ce silence-là, entre le praticien et l'animal, est devenu ma boussole.</p>
+        <p>Je suis ostéopathe animalier et technicien dentaire équin. Mais avant ça, je suis quelqu'un qui capte, les collègues au travail, la qualité d'un geste, la concentration dans une salle de formation. C'est en captant les autres que j'ai compris ce que je voulais devenir.</p>
+        <p>On peut perdre ses mains. Pas physiquement, perceptivement. La surcharge efface la sensation, installe le pilote automatique. J'ai traversé ces périodes. Les reconnaître m'a ramenée à l'essentiel : revenir aux bases, aux perceptions, au détail.</p>
+        <p>Ce site est le prolongement d'une curiosité qui refuse de se fixer. Des disciplines, des livres, des rencontres improbables, tout ce qui vient bousculer ce que je croyais savoir.</p>
+      </div>
+    </div>
+
+    <hr class="line">
+
+    <div class="apropos-text">
+      <div class="apropos-text-inner">
+        <p>En 2025, j'ai obtenu un master en Management des établissements de formation et de recherche en santé à l'Université de Haute-Alsace. Visée recherche, pédagogie, management.</p>
+        <p>Ce que ce cursus m'a donné, ce n'est pas un vocabulaire supplémentaire. C'est la capacité de nommer ce que je faisais déjà sans pouvoir le dire. Mettre des mots sur des concepts, articuler le savoir et l'expérience, exiger de soi une réflexivité plus rigoureuse.</p>
+        <p>Pas un jour ne passe sans que je mobilise ce que j'y ai appris.</p>
+      </div>
+    </div>
+
+    <hr class="line">
+
+    <div class="apropos-credits">
+      <div>
+        <p class="credit-label">Pratique</p>
+        <p class="credit-item">
+          Ostéopathie animalière OA247<br>
+          Dentisterie équine conventionnée<br>
+          Formation — numéro DREETS
+        </p>
+      </div>
+      <div>
+        <p class="credit-label">Transmission</p>
+        <p class="credit-item">
+          Direction de mémoires — ostéopathie animale<br>
+          Mentorat de jeunes praticiens dentaires équins<br>
+          Conférencière (Symbiostéo 2019, congrès FFTDE)
+        </p>
+      </div>
+      <div>
+        <p class="credit-label">Collectif</p>
+        <p class="credit-item">
+          Trésorière, Collectif des Ostéopathes Animaliers<br>
+          Rédactrice Ostéo4Pattes
+        </p>
+      </div>
+    </div>
+
+    <hr class="line">
+    <footer>
+      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin">LinkedIn</a>
+        <span class="footer-domain">pouget-leroy.fr</span>
+      </div>
+    </footer>
+    <hr class="line">
+  </div>
+
+  <!-- PAGE RUBRIQUE : PENSER -->
+  <div class="page" id="page-penser">
+    <div class="article-header" style="background:#e0cfc6;">
+      <div class="rub-bar" style="background:#b89a8c; height:2px; width:28px; margin-bottom:22px;"></div>
+      <p class="article-header-rub">01</p>
+      <h1 class="article-header-title">Penser</h1>
+      <p class="article-header-date">Essais, prises de position épistémiques, ce qui résiste à la simplification.</p>
+    </div>
+    <hr class="line">
+    <main class="articles-zone">
+      <article class="article-card" onclick="showPage('article-osteopathes')" style="cursor:pointer;">
+        <div class="article-img img-penser">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3a3835" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <div>
+          <p class="art-rub">Juin 2026</p>
+          <h2 class="art-title">Sommes-nous des ostéopathes ?</h2>
+          <p class="art-excerpt">Notre identité professionnelle ne se construit pas malgré les tensions qui la traversent. Elle tient par elles.</p>
+        </div>
+      </article>
+      <article class="article-card" onclick="showPage('article-humilite')" style="cursor:pointer;">
+        <div class="article-img img-penser">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3a3835" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="12" r="10"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <div>
+          <p class="art-rub">Juin 2026</p>
+          <h2 class="art-title">L'humilité de l'expert</h2>
+          <p class="art-excerpt">Quand un praticien aguerri ne trouve plus ses mots. Ce que ce silence révèle sur la construction de nos perceptions.</p>
+        </div>
+      </article>
+    </main>
+    <hr class="line">
+    <footer>
+      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin">LinkedIn</a>
+        <span class="footer-domain">pouget-leroy.fr</span>
+      </div>
+    </footer>
+    <hr class="line">
+  </div>
+
+  <!-- PAGE RUBRIQUE : TOUCHER -->
+  <div class="page" id="page-toucher">
+    <div class="article-header" style="background:#ccd4c2;">
+      <div class="rub-bar" style="background:#8a9e84; height:2px; width:28px; margin-bottom:22px;"></div>
+      <p class="article-header-rub">02</p>
+      <h1 class="article-header-title">Toucher</h1>
+      <p class="article-header-date">Cas cliniques, observations terrain, ce que les mains savent avant le mot.</p>
+    </div>
+    <hr class="line">
+    <main class="articles-zone">
+      <p style="font-size:13px; color:#a09a93; padding: 40px 0; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px;">Les premiers textes arrivent bientôt.</p>
+    </main>
+    <hr class="line">
+    <footer>
+      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin">LinkedIn</a>
+        <span class="footer-domain">pouget-leroy.fr</span>
+      </div>
+    </footer>
+    <hr class="line">
+  </div>
+
+  <!-- PAGE RUBRIQUE : RÉSONANCES -->
+  <div class="page" id="page-resonances">
+    <div class="article-header" style="background:#d8d0c4;">
+      <div class="rub-bar" style="background:#a09480; height:2px; width:28px; margin-bottom:22px;"></div>
+      <p class="article-header-rub">03</p>
+      <h1 class="article-header-title">Résonances</h1>
+      <p class="article-header-date">Sources extérieures qui traversent, jazz, lecture, rencontres inattendues.</p>
+    </div>
+    <hr class="line">
+    <main class="articles-zone">
+      <article class="article-card" onclick="showPage('article-sonny')" style="cursor:pointer;">
+        <div class="article-img img-resonances">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3a3835" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <p class="art-rub">Mai 2026</p>
+          <h2 class="art-title">Sonny Rollins et l'improvisation maîtrisée</h2>
+          <p class="art-excerpt">Ce que le jazz enseigne sur l'expertise incarnée. Et pourquoi le praticien qui ne sait plus où sont ses mains joue mieux que celui qui les surveille.</p>
+        </div>
+      </article>
+    </main>
+    <hr class="line">
+    <footer>
+      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin">LinkedIn</a>
+        <span class="footer-domain">pouget-leroy.fr</span>
+      </div>
+    </footer>
+    <hr class="line">
+  </div>
+
+  <!-- PAGE CONTACT -->
+  <div class="page" id="page-contact">
+
+    <div class="article-header">
+      <h1 class="article-header-title">Contact</h1>
+    </div>
+
+    <hr class="line">
+
+    <div class="apropos-text">
+      <div class="apropos-text-inner" style="padding-top: 64px; padding-bottom: 64px;">
+        <p>Pour toute prise de contact — question, proposition de collaboration, intervention ou simplement prolonger une lecture.</p>
+        <p style="margin-top: 40px;">
+          <a href="mailto:sophie@pouget-leroy.fr" style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300; color:#3a3835; text-decoration:none; border-bottom: 0.5px solid #b8b3ac; padding-bottom: 3px; transition: border-color 0.2s;">sophie@pouget-leroy.fr</a>
+        </p>
+      </div>
+    </div>
+
+    <hr class="line">
+    <footer>
+      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin">LinkedIn</a>
+        <span class="footer-domain">pouget-leroy.fr</span>
+      </div>
+    </footer>
+    <hr class="line">
+  </div>
+
+  <!-- PAGE ARTICLE : SOMMES-NOUS DES OSTÉOPATHES ? -->
+  <div class="page" id="page-article-osteopathes">
+
+    <div class="article-header">
+      <p class="article-header-rub">Penser</p>
+      <h1 class="article-header-title">Sommes-nous des ostéopathes ?</h1>
+      <p class="article-header-date">Juin 2026</p>
+    </div>
+
+    <hr class="line">
+
+    <div class="article-body">
+      <div class="article-body-inner">
+        <p><strong style="font-weight:400;">On sort de formation avec des outils. Mais sommes-nous des ostéopathes ?</strong></p>
+        <p>Une vingtaine d'années de pratique, trois registres d'exercice simultanés : ostéopathie animalière, dentisterie équine, formation. Un point commun : intervenir sur des systèmes vivants qui ne tolèrent pas la rigidité. C'est là, dans cette multiplicité, qu'une évidence s'est imposée. Notre identité professionnelle ne se construit pas malgré les tensions qui la traversent. Elle tient par elles.</p>
+        <p>Notre métier se construit sans filet. Pas de mémoire collective stabilisée, pas de modèle identitaire transmis de génération en génération. Les cadres réglementaires bougent, la reconnaissance sociale reste fragile, les formations divergent. On apprend à faire. Rarement à être.</p>
+        <p>Ce vide n'est pas un manque provisoire en attendant que la profession mûrisse. C'est la condition structurelle dans laquelle chaque OA construit son identité. Et cette condition, si on ne la nomme pas, devient un angle mort.</p>
+        <p>La tenségrité désigne une structure stabilisée par la dualité synergique entre forces de tension et de compression, refermée sur elle-même. Les forces ne s'échappent pas du système : elles se redistribuent. Aucun élément ne tient seul. Aucun n'est hiérarchiquement supérieur aux autres. C'est l'équilibre des tensions qui produit la forme, la stabilité, le mouvement.</p>
+        <p>J'ai reconnu là quelque chose que je vivais sans pouvoir le nommer.</p>
+        <p>Notre identité professionnelle fonctionne de la même façon. Quatre pôles en tension permanente : l'identité en devenir, la professionnalisation, l'accompagnement, la congruence. Aucun ne se stabilise indépendamment des autres. Toucher l'un déplace les trois restants.</p>
+        <p>L'identité en devenir, c'est ce que l'exercice déplace en nous à mesure qu'on pratique. Pas un état qu'on atteint. Un processus qui ne s'arrête pas.</p>
+        <p>La professionnalisation, c'est la navigation dans un champ encore instable : composer avec les tensions entre formation reçue, reconnaissance sociale et engagement personnel.</p>
+        <p>L'accompagnement, c'est la posture de celui ou celle qui soutient l'élaboration d'une pratique située sans imposer de forme prédéfinie.</p>
+        <p>La congruence, empruntée à Rogers, c'est la cohérence dynamique entre ce qu'on ressent, ce qu'on pense et ce qu'on exprime dans la relation. Pas une transparence totale. Une fidélité intérieure ajustée à ce qui se vit.</p>
+        <p>Ce que la matrice rend visible, c'est que les tensions entre ces quatre pôles ne sont pas des problèmes à résoudre. Elles sont constitutives de la trajectoire. Stabilité et mobilité. Intériorité et extériorité. Reconnaissance et autonomie. Technique et sens.</p>
+        <p>Un OA qui doute de sa légitimité n'est pas en échec. Il habite une tension réelle, structurelle, que le métier produit par nature. Un formateur qui ne sait plus comment nommer ce qu'il transmet n'a pas raté quelque chose. Il est arrivé au bord de sa zone proximale de développement — là où ce qu'il sait faire ne suffit plus à dire ce qu'il fait, et où un accompagnement situé peut ouvrir ce que la pratique seule ne peut pas dénouer.</p>
+        <p>La matrice ne résout pas ces tensions. Elle donne un cadre pour les habiter sans s'y perdre.</p>
+        <p>Ce travail a commencé dans la pratique, pas dans les livres. La tenségrité s'est imposée comme structure explicative parce qu'elle décrivait ce que j'observais, pas parce que je cherchais une métaphore élégante.</p>
+
+        <p style="font-size:12px; color:#a09a93; margin-top:48px; font-family:'Jost',sans-serif; line-height:2; font-style:italic;">Une version scientifique détaillée de ce travail, avec cadre méthodologique et références complètes, est en cours d'évaluation à La Revue de l'Ostéopathie.</p>
+      </div>
+    </div>
+
+    <hr class="line">
+
+    <!-- CTA CARTE MENTALE -->
+    <div style="background:#e0cfc6; padding:48px 56px;">
+      <div style="max-width:680px; margin:0 auto;">
+        <p style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:#8a6a5e; margin-bottom:16px;">Ressource associée</p>
+        <p style="font-family:'Cormorant Garamond',serif; font-weight:300; font-size:26px; color:#3a3835; margin-bottom:16px; line-height:1.3;">La carte mentale de la matrice</p>
+        <p style="font-size:13px; color:#5a4f47; line-height:1.9; margin-bottom:28px;">Les quatre pôles, les tensions constitutives, les repères clés — en un seul document à garder sous la main.</p>
+        <a href="carte.html" style="display:inline-block; background:#3a3835; color:#f2ede8; padding:14px 28px; font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; text-decoration:none;">Télécharger la carte (PDF)</a>
+      </div>
+    </div>
+
+    <hr class="line">
+
+    <div class="article-back">
+      <span onclick="showPage('penser')">← Retour à Penser</span>
+    </div>
+
+    <hr class="line">
+    <footer>
+      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin">LinkedIn</a>
+        <span class="footer-domain">pouget-leroy.fr</span>
+      </div>
+    </footer>
+    <hr class="line">
+  </div>
+
+  <!-- PAGE ARTICLE : SONNY ROLLINS -->
+  <div class="page" id="page-article-sonny">
+
+    <div class="article-header">
+      <p class="article-header-rub">Résonances</p>
+      <h1 class="article-header-title">Sonny Rollins et l'improvisation maîtrisée</h1>
+      <p class="article-header-date">Mai 2026</p>
+    </div>
+
+    <hr class="line">
+
+    <div class="article-body">
+      <div class="article-body-inner">
+        <p>Sonny Rollins est mort hier.</p>
+        <p>On associe le jazz à la liberté, à l'improvisation sans filet. Guillaume Erner le retourne ce matin sur France Culture : l'improvisation n'est pas l'absence de contraintes. C'est l'art de jouer avec elles.</p>
+        <p>Sans partition, tout doit venir de l'intérieur.</p>
+        <p>Je pense à ça dans la formation. On imagine souvent que l'expert suit le protocole à la lettre, que la maîtrise se lit dans la régularité. Ce n'est pas ce qu'on observe chez les praticiens qui nous fascinent. Eux répondent à ce qui est là, maintenant. Ils trouvent leur chemin en marchant. Ils acceptent la fausse note parce qu'ils savent qu'elle peut devenir un motif.</p>
+        <p>Dreyfus, dans ses travaux sur l'acquisition des compétences, nomme ce basculement : à un niveau d'expertise suffisant, les règles sont tellement intégrées qu'elles disparaissent. Ce qui paraît naturel est du travail devenu invisible.</p>
+        <p>L'improvisation n'est pas la liberté de ne rien savoir. C'est la liberté que donne le fait d'avoir tout appris.</p>
+        <p style="font-size:12px; color:#a09a93; margin-top: 48px; font-family:'Jost',sans-serif; line-height:1.8;">Guillaume Erner, L'humeur du matin, France Culture, 27 mai 2026.<br>Dreyfus H. & Dreyfus S., Mind over Machine, 1986.</p>
+      </div>
+    </div>
+
+    <hr class="line">
+
+    <div class="article-back">
+      <span onclick="showPage('accueil')">← Retour</span>
+    </div>
+
+    <hr class="line">
+    <footer>
+      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin">LinkedIn</a>
+        <span class="footer-domain">pouget-leroy.fr</span>
+      </div>
+    </footer>
+    <hr class="line">
+  </div>
+
+  <!-- PAGE ARTICLE : L'HUMILITÉ DE L'EXPERT -->
+  <div class="page" id="page-article-humilite">
+
+    <div class="article-header">
+      <p class="article-header-rub">Penser</p>
+      <h1 class="article-header-title">L'humilité de l'expert</h1>
+      <p class="article-header-date">Juin 2026</p>
+    </div>
+
+    <hr class="line">
+
+    <div class="article-body">
+      <div class="article-body-inner">
+        <p>Il y avait ce monsieur, à l'atelier ROC 2026. Praticien aguerri, regard attentif, la posture de quelqu'un qui sait ce qu'il fait. Quand je lui ai demandé d'expliquer ce qu'il venait de faire, pourquoi il l'avait fait, comment il l'avait senti, il a levé les mains.</p>
+        <p>Pas pour montrer. Pour chercher.</p>
+        <p>Les mots ne venaient pas, alors les gestes sont arrivés à leur place. Il mimait ce que ses doigts savaient et que sa tête ne trouvait pas encore. C'était le moment de l'atelier.</p>
+        <p>Pas un échec. Exactement l'inverse.</p>
+        <p>Nos perceptions ne sont pas neutres. Elles sont construites par les modèles qu'on nous a enseignés, par les mains de ceux qui nous ont formés, par les milliers de fois où on a posé les nôtres sur un corps et attendu quelque chose. Cette construction est nécessaire. Elle peut aussi devenir un filtre si on ne prend pas le temps de l'interroger.</p>
+        <p>Ce que l'atelier cherchait à provoquer : créer le léger écart entre ce qu'on croit percevoir et ce qui est là. Quand cet écart apparaît, quelque chose bouge. Le cerveau prédit, la réalité résiste, et c'est dans cet espace que l'apprentissage reprend.</p>
+        <p>Ce monsieur a mimé. Dans ce mime, il y avait plus de savoir que dans n'importe quelle explication. Il le savait. C'est ça qui l'a ému.</p>
+        <p>L'humilité de l'expert n'est pas un manque. C'est la preuve que quelque chose s'est vraiment incarné.</p>
+      </div>
+    </div>
+
+    <hr class="line">
+
+    <div class="article-back">
+      <span onclick="showPage('accueil')">← Retour</span>
+    </div>
+
+    <hr class="line">
+    <footer>
+      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-right">
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin">LinkedIn</a>
+        <span class="footer-domain">pouget-leroy.fr</span>
+      </div>
+    </footer>
+    <hr class="line">
+  </div>
+
+  <script>
+    function showPage(name) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + name).classList.add('active');
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      const active = document.getElementById('nav-' + name);
+      if (active) active.classList.add('active');
+      document.getElementById('nav-menu').classList.remove('open');
+      window.scrollTo(0, 0);
+    }
+
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
