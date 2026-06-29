@@ -115,13 +115,12 @@
     .credit-item { font-size: 12px; color: #5a5653; line-height: 2.1; }
 
     /* FOOTER */
-    footer { background: #f2ede8; padding: 24px 56px; display: flex; justify-content: space-between; align-items: center; }
-    .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 13px; font-weight: 300; font-style: italic; color: #8a847d; }
-    .footer-right { display: flex; align-items: center; gap: 24px; }
-    .footer-domain { font-size: 10px; letter-spacing: 0.15em; color: #a09a93; }
-    .footer-linkedin { display: flex; align-items: center; gap: 6px; font-size: 10px; letter-spacing: 0.15em; color: #6b6760; text-decoration: none; transition: color 0.2s; }
-    .footer-linkedin:hover { color: #3a3835; }
-    .footer-linkedin svg { flex-shrink: 0; }
+    footer { background: #f2ede8; padding: 20px 56px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+    .footer-item { display: flex; align-items: center; gap: 6px; font-family: 'Jost', sans-serif; font-weight: 300; font-size: 10px; letter-spacing: 0.15em; color: #6b6760; text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+    .footer-item:hover { color: #3a3835; }
+    .footer-item svg { flex-shrink: 0; }
+    .footer-left { display: flex; gap: 24px; align-items: center; }
+    .footer-right { display: flex; gap: 24px; align-items: center; }
 
     /* ===== RESPONSIVE MOBILE ===== */
     @media (max-width: 768px) {
@@ -281,10 +280,18 @@
 
     <hr class="line">
     <footer>
-      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-left">
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ostéopathe animalier · Formatrice
+        </span>
+      </div>
       <div class="footer-right">
-        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-        <span class="footer-domain">pouget-leroy.fr</span>
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          pouget-leroy.fr
+        </span>
       </div>
     </footer>
     <hr class="line">
@@ -359,10 +366,18 @@
 
     <hr class="line">
     <footer>
-      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-left">
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ostéopathe animalier · Formatrice
+        </span>
+      </div>
       <div class="footer-right">
-        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-        <span class="footer-domain">pouget-leroy.fr</span>
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          pouget-leroy.fr
+        </span>
       </div>
     </footer>
     <hr class="line">
@@ -401,10 +416,18 @@
     </main>
     <hr class="line">
     <footer>
-      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-left">
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ostéopathe animalier · Formatrice
+        </span>
+      </div>
       <div class="footer-right">
-        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-        <span class="footer-domain">pouget-leroy.fr</span>
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          pouget-leroy.fr
+        </span>
       </div>
     </footer>
     <hr class="line">
@@ -433,10 +456,18 @@
     </main>
     <hr class="line">
     <footer>
-      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-left">
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ostéopathe animalier · Formatrice
+        </span>
+      </div>
       <div class="footer-right">
-        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-        <span class="footer-domain">pouget-leroy.fr</span>
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          pouget-leroy.fr
+        </span>
       </div>
     </footer>
     <hr class="line">
@@ -467,10 +498,18 @@
     </main>
     <hr class="line">
     <footer>
-      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-left">
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ostéopathe animalier · Formatrice
+        </span>
+      </div>
       <div class="footer-right">
-        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-        <span class="footer-domain">pouget-leroy.fr</span>
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          pouget-leroy.fr
+        </span>
       </div>
     </footer>
     <hr class="line">
@@ -496,10 +535,18 @@
 
     <hr class="line">
     <footer>
-      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-left">
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ostéopathe animalier · Formatrice
+        </span>
+      </div>
       <div class="footer-right">
-        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-        <span class="footer-domain">pouget-leroy.fr</span>
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          pouget-leroy.fr
+        </span>
       </div>
     </footer>
     <hr class="line">
@@ -542,10 +589,18 @@
 
     <hr class="line">
     <footer>
-      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-left">
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ostéopathe animalier · Formatrice
+        </span>
+      </div>
       <div class="footer-right">
-        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-        <span class="footer-domain">pouget-leroy.fr</span>
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          pouget-leroy.fr
+        </span>
       </div>
     </footer>
     <hr class="line">
@@ -604,10 +659,18 @@
 
     <hr class="line">
     <footer>
-      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-left">
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ostéopathe animalier · Formatrice
+        </span>
+      </div>
       <div class="footer-right">
-        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-        <span class="footer-domain">pouget-leroy.fr</span>
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          pouget-leroy.fr
+        </span>
       </div>
     </footer>
     <hr class="line">
@@ -644,10 +707,18 @@
 
     <hr class="line">
     <footer>
-      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-left">
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ostéopathe animalier · Formatrice
+        </span>
+      </div>
       <div class="footer-right">
-        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-        <span class="footer-domain">pouget-leroy.fr</span>
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          pouget-leroy.fr
+        </span>
       </div>
     </footer>
     <hr class="line">
@@ -685,10 +756,18 @@
 
     <hr class="line">
     <footer>
-      <span class="footer-name">Ostéopathe animalier · Formatrice</span>
+      <div class="footer-left">
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ostéopathe animalier · Formatrice
+        </span>
+      </div>
       <div class="footer-right">
-        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-linkedin"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
-        <span class="footer-domain">pouget-leroy.fr</span>
+        <a href="https://www.linkedin.com/in/sophie-pouget-leroy-59b06823a" target="_blank" rel="noopener" class="footer-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+        <span class="footer-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          pouget-leroy.fr
+        </span>
       </div>
     </footer>
     <hr class="line">
