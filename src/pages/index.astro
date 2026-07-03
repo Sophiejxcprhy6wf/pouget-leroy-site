@@ -1,0 +1,98 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Sophie Pouget-Leroy — Ostéopathe animalier, formatrice, penseuse"
+  description="Ostéopathe animalier et technicien dentaire équin, Sophie Pouget-Leroy partage ses réflexions sur la pratique, le corps et la transmission. Écrits de terrain sur pouget-leroy.fr"
+  canonical="https://pouget-leroy.fr"
+>
+
+  <div class="hero">
+    <div class="hero-text">
+      <div>
+        <h1 class="hero-title">Ostéopathe.<br>Formatrice.<br>Penseuse.</h1>
+        <p class="hero-meta">Écrits de terrain — pouget-leroy.fr</p>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="/Via ferrata evolene jpeg.jpg" alt="Sophie Pouget-Leroy sur la via ferrata d'Evolène" style="width:100%; height:100%; object-fit:cover; object-position:center center; display:block;">
+    </div>
+  </div>
+
+  <hr class="line">
+
+  <div class="rubriques">
+    <a href="/penser" class="rubrique rub-penser">
+      <div class="rub-bar"></div>
+      <div class="rub-num">01</div>
+      <h2 class="rub-title">Penser</h2>
+      <p class="rub-desc">Essais, prises de position épistémiques, ce qui résiste à la simplification.</p>
+    </a>
+    <a href="/toucher" class="rubrique rub-toucher">
+      <div class="rub-bar"></div>
+      <div class="rub-num">02</div>
+      <h2 class="rub-title">Toucher</h2>
+      <p class="rub-desc">Cas cliniques, observations terrain, ce que les mains savent avant le mot.</p>
+    </a>
+    <a href="/resonances" class="rubrique rub-resonances">
+      <div class="rub-bar"></div>
+      <div class="rub-num">03</div>
+      <h2 class="rub-title">Résonances</h2>
+      <p class="rub-desc">Sources extérieures qui traversent, jazz, lecture, rencontres inattendues.</p>
+    </a>
+  </div>
+
+  <hr class="line">
+
+  <main class="articles-zone">
+    <p class="section-label">Derniers écrits</p>
+
+    <a href="/articles/temps-suspendu" class="article-card">
+      <div class="article-img img-toucher">
+        <img src="/temps-suspendu.jpg" alt="Palpation sans licol" style="width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block;">
+      </div>
+      <div>
+        <p class="art-rub">Toucher</p>
+        <h2 class="art-title">Le temps suspendu</h2>
+        <p class="art-excerpt">Une jument de quatre ans, un box, un nid d'hirondelles au-dessus. Ce matin-là, quelque chose s'est dilaté.</p>
+      </div>
+    </a>
+
+    <a href="/articles/sommes-nous-des-osteopathes" class="article-card">
+      <div class="article-img img-penser">
+        <img src="/matrice-tensegrale.svg" alt="Carte mentale matrice tenségrale" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block; opacity:0.85;">
+      </div>
+      <div>
+        <p class="art-rub">Penser</p>
+        <h2 class="art-title">Sommes-nous des ostéopathes ?</h2>
+        <p class="art-excerpt">Notre identité professionnelle ne se construit pas malgré les tensions qui la traversent. Elle tient par elles.</p>
+      </div>
+    </a>
+
+    <a href="/articles/sonny-rollins" class="article-card">
+      <div class="article-img img-resonances" style="padding:20px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3a3835" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+        </svg>
+      </div>
+      <div>
+        <p class="art-rub">Résonances</p>
+        <h2 class="art-title">Sonny Rollins et l'improvisation maîtrisée</h2>
+        <p class="art-excerpt">Ce que le jazz enseigne sur l'expertise incarnée. Et pourquoi le praticien qui ne sait plus où sont ses mains joue mieux que celui qui les surveille.</p>
+      </div>
+    </a>
+
+    <a href="/articles/humilite-expert" class="article-card">
+      <div class="article-img img-penser">
+        <img src="/Humilité_expert.jpg" alt="Mains sur un poulain" style="width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block;">
+      </div>
+      <div>
+        <p class="art-rub">Penser</p>
+        <h2 class="art-title">L'humilité de l'expert</h2>
+        <p class="art-excerpt">Quand un praticien aguerri ne trouve plus ses mots. Ce que ce silence révèle sur la construction de nos perceptions.</p>
+      </div>
+    </a>
+  </main>
+
+</Layout>

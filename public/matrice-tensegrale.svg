@@ -1,0 +1,109 @@
+<svg viewBox="0 0 820 730" xmlns="http://www.w3.org/2000/svg">
+
+  <rect width="820" height="730" fill="#f2ede8"/>
+
+  <!-- Titre -->
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-weight="300" font-size="18" fill="#5a4f47" text-anchor="middle" letter-spacing="2" x="410" y="36">SOMMES-NOUS DES OSTÉOPATHES ?</text>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="10" fill="#9a8f87" text-anchor="middle" letter-spacing="1" x="410" y="52">Matrice tenségrale de l'identité professionnelle OA · Sophie Pouget-Leroy</text>
+
+  <!-- TENSION LINES -->
+  <line stroke="#b3a49a" stroke-width="1.5" opacity="0.8" x1="410" y1="320" x2="200" y2="205"/>
+  <line stroke="#b3a49a" stroke-width="1.5" opacity="0.8" x1="410" y1="320" x2="620" y2="205"/>
+  <line stroke="#b3a49a" stroke-width="1.5" opacity="0.8" x1="410" y1="320" x2="200" y2="460"/>
+  <line stroke="#b3a49a" stroke-width="1.5" opacity="0.8" x1="410" y1="320" x2="620" y2="460"/>
+  <line stroke="#8c7d74" stroke-width="1" stroke-dasharray="5 4" opacity="0.7" x1="200" y1="205" x2="620" y2="205"/>
+  <line stroke="#8c7d74" stroke-width="1" stroke-dasharray="5 4" opacity="0.7" x1="620" y1="205" x2="620" y2="460"/>
+  <line stroke="#8c7d74" stroke-width="1" stroke-dasharray="5 4" opacity="0.7" x1="620" y1="460" x2="200" y2="460"/>
+  <line stroke="#8c7d74" stroke-width="1" stroke-dasharray="5 4" opacity="0.7" x1="200" y1="460" x2="200" y2="205"/>
+  <line stroke="#8c7d74" stroke-width="1" stroke-dasharray="2 7" opacity="0.45" x1="200" y1="205" x2="620" y2="460"/>
+  <line stroke="#8c7d74" stroke-width="1" stroke-dasharray="2 7" opacity="0.45" x1="620" y1="205" x2="200" y2="460"/>
+
+  <!-- Connecteurs pôles → sous-nœuds -->
+  <line stroke="#c4b9b1" stroke-width="0.9" opacity="0.6" x1="200" y1="167" x2="200" y2="132"/>
+  <line stroke="#c4b9b1" stroke-width="0.9" opacity="0.6" x1="620" y1="167" x2="620" y2="132"/>
+  <line stroke="#c4b9b1" stroke-width="0.9" opacity="0.6" x1="200" y1="498" x2="200" y2="512"/>
+  <line stroke="#c4b9b1" stroke-width="0.9" opacity="0.6" x1="620" y1="498" x2="620" y2="512"/>
+
+  <!-- PÔLES -->
+  <ellipse cx="200" cy="205" rx="90" ry="38" fill="#e0cfc6" stroke="#c8b5ab" stroke-width="1.2"/>
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#3d352e" text-anchor="middle" x="200" y="198">Identité</text>
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#3d352e" text-anchor="middle" x="200" y="215">en devenir</text>
+
+  <ellipse cx="620" cy="205" rx="90" ry="38" fill="#d8d0c4" stroke="#bfb6a8" stroke-width="1.2"/>
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#3d352e" text-anchor="middle" x="620" y="209">Professionnalisation</text>
+
+  <ellipse cx="200" cy="460" rx="90" ry="38" fill="#ccd4c2" stroke="#b3bca9" stroke-width="1.2"/>
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#3d352e" text-anchor="middle" x="200" y="464">Accompagnement</text>
+
+  <ellipse cx="620" cy="460" rx="90" ry="38" fill="#e0cfc6" stroke="#c8b5ab" stroke-width="1.2"/>
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#3d352e" text-anchor="middle" x="620" y="464">Congruence</text>
+
+  <!-- CENTRE -->
+  <ellipse cx="410" cy="320" rx="96" ry="48" fill="#ffffff" stroke="#b3a49a" stroke-width="1.5"/>
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-weight="300" font-size="15" fill="#5a4f47" text-anchor="middle" x="410" y="309">Sommes-nous</text>
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-weight="300" font-size="15" fill="#5a4f47" text-anchor="middle" x="410" y="327">des ostéopathes ?</text>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="9" fill="#9a8f87" text-anchor="middle" x="410" y="344">tensions constitutives</text>
+
+  <!-- SOUS-NŒUDS HG -->
+  <rect x="123" y="102" width="154" height="30" rx="3" fill="#f7f3f0" stroke="#e0cfc6" stroke-width="0.9"/>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="11" fill="#5a4f47" text-anchor="middle" dominant-baseline="middle" x="200" y="117">déplacé par la pratique</text>
+  <line stroke="#c4b9b1" stroke-width="0.6" opacity="0.5" x1="200" y1="102" x2="200" y2="72"/>
+  <rect x="120" y="62" width="160" height="30" rx="3" fill="#f7f3f0" stroke="#e0cfc6" stroke-width="0.9"/>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="11" fill="#5a4f47" text-anchor="middle" dominant-baseline="middle" x="200" y="77">un processus, pas un état</text>
+
+  <!-- SOUS-NŒUDS HD -->
+  <rect x="543" y="102" width="154" height="30" rx="3" fill="#f7f3f0" stroke="#d8d0c4" stroke-width="0.9"/>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="11" fill="#5a4f47" text-anchor="middle" dominant-baseline="middle" x="620" y="117">formation ↔ reconnaissance</text>
+  <line stroke="#c4b9b1" stroke-width="0.6" opacity="0.5" x1="620" y1="102" x2="620" y2="72"/>
+  <rect x="543" y="62" width="154" height="30" rx="3" fill="#f7f3f0" stroke="#d8d0c4" stroke-width="0.9"/>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="11" fill="#5a4f47" text-anchor="middle" dominant-baseline="middle" x="620" y="77">champ instable à naviguer</text>
+
+  <!-- SOUS-NŒUDS BG -->
+  <rect x="123" y="512" width="154" height="30" rx="3" fill="#f7f3f0" stroke="#ccd4c2" stroke-width="0.9"/>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="11" fill="#5a4f47" text-anchor="middle" dominant-baseline="middle" x="200" y="527">sans forme prédéfinie</text>
+  <line stroke="#c4b9b1" stroke-width="0.6" opacity="0.5" x1="200" y1="542" x2="200" y2="554"/>
+  <rect x="118" y="554" width="164" height="30" rx="3" fill="#f7f3f0" stroke="#ccd4c2" stroke-width="0.9"/>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="11" fill="#5a4f47" text-anchor="middle" dominant-baseline="middle" x="200" y="569">pratique située, élaborée</text>
+
+  <!-- SOUS-NŒUDS BD -->
+  <rect x="543" y="512" width="154" height="30" rx="3" fill="#f7f3f0" stroke="#e0cfc6" stroke-width="0.9"/>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="11" fill="#5a4f47" text-anchor="middle" dominant-baseline="middle" x="620" y="527">fidélité intérieure ajustée</text>
+  <line stroke="#c4b9b1" stroke-width="0.6" opacity="0.5" x1="620" y1="542" x2="620" y2="554"/>
+  <rect x="543" y="554" width="154" height="30" rx="3" fill="#f7f3f0" stroke="#e0cfc6" stroke-width="0.9"/>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="11" fill="#5a4f47" text-anchor="middle" dominant-baseline="middle" x="620" y="569">ressentir · penser · exprimer</text>
+
+  <!-- SÉPARATEUR -->
+  <line stroke="#e0d8d2" stroke-width="1" x1="60" y1="596" x2="760" y2="596"/>
+
+  <!-- Phrase clé -->
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="9" fill="#b0a49a" text-anchor="middle" letter-spacing="1.5" x="410" y="614">AUCUN PÔLE NE TIENT SEUL · TOUCHER L'UN DÉPLACE LES TROIS</text>
+
+  <!-- Titre légende -->
+  <text font-family="'Cormorant Garamond', Georgia, serif" font-weight="300" font-size="10" fill="#9a8f87" text-anchor="middle" letter-spacing="1" x="410" y="634">Tensions constitutives · non à résoudre</text>
+
+  <!-- ─── LÉGENDE 2×2 ─── -->
+
+  <!-- Paire 1 — stabilité / mobilité (col gauche, ligne 1) -->
+  <rect x="80" y="644" width="16" height="26" rx="1" fill="#e0cfc6"/>
+  <rect x="96" y="644" width="224" height="26" fill="#ffffff" stroke="#e0d8d2" stroke-width="0.8"/>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="10" fill="#5a4f47" dominant-baseline="middle" x="106" y="657"><tspan fill="#b3a49a" font-size="9" letter-spacing="0.5">STABILITÉ</tspan>  /  mobilité</text>
+
+  <!-- Paire 2 — intériorité / extériorité (col droite, ligne 1) -->
+  <rect x="450" y="644" width="16" height="26" rx="1" fill="#d8d0c4"/>
+  <rect x="466" y="644" width="240" height="26" fill="#ffffff" stroke="#e0d8d2" stroke-width="0.8"/>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="10" fill="#5a4f47" dominant-baseline="middle" x="476" y="657"><tspan fill="#b3a49a" font-size="9" letter-spacing="0.5">INTÉRIORITÉ</tspan>  /  extériorité</text>
+
+  <!-- Paire 3 — reconnaissance / autonomie (col gauche, ligne 2) -->
+  <rect x="80" y="678" width="16" height="26" rx="1" fill="#ccd4c2"/>
+  <rect x="96" y="678" width="224" height="26" fill="#ffffff" stroke="#e0d8d2" stroke-width="0.8"/>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="10" fill="#5a4f47" dominant-baseline="middle" x="106" y="691"><tspan fill="#b3a49a" font-size="9" letter-spacing="0.5">RECONNAISSANCE</tspan>  /  autonomie</text>
+
+  <!-- Paire 4 — technique / sens (col droite, ligne 2) -->
+  <rect x="450" y="678" width="16" height="26" rx="1" fill="#e0cfc6"/>
+  <rect x="466" y="678" width="240" height="26" fill="#ffffff" stroke="#e0d8d2" stroke-width="0.8"/>
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="10" fill="#5a4f47" dominant-baseline="middle" x="476" y="691"><tspan fill="#b3a49a" font-size="9" letter-spacing="0.5">TECHNIQUE</tspan>  /  sens</text>
+
+  <!-- Sources -->
+  <text font-family="'Jost', Arial, sans-serif" font-weight="300" font-size="8" fill="#b0a49a" text-anchor="middle" x="410" y="722">Levin (2003) · Rogers (1995) · Vygotski (1997) · L'Hermite (2023) · Paul (2004) · Wittorski (2007)</text>
+
+</svg>

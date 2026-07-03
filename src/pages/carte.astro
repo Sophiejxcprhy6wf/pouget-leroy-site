@@ -1,0 +1,179 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Carte mentale — Matrice tenségrale de l'identité OA · Sophie Pouget-Leroy"
+  description="Téléchargez gratuitement la carte mentale de la matrice tenségrale de l'identité professionnelle des ostéopathes animaliers."
+  noindex={true}
+>
+
+  <style>
+    .hero-carte { padding: 64px 56px 48px; max-width: 860px; margin: 0 auto; }
+    .hero-tag { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #a09a93; margin-bottom: 20px; }
+    .hero-title-carte { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 46px; line-height: 1.1; color: #3a3835; margin-bottom: 24px; }
+    .hero-intro { font-size: 15px; color: #5a5653; line-height: 2; max-width: 580px; }
+    .preview-zone { background: #ffffff; padding: 48px 56px; }
+    .preview-inner { max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .preview-img { background: #f2ede8; border: 0.5px solid #e0d8d2; padding: 20px; position: relative; overflow: hidden; }
+    .preview-img img { width: 100%; display: block; pointer-events: none; user-select: none; }
+    .preview-img-fade { position: absolute; bottom: 0; left: 0; right: 0; height: 45%; background: linear-gradient(to bottom, transparent, #ffffff); }
+    .preview-content h2 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 28px; color: #3a3835; margin-bottom: 20px; line-height: 1.2; }
+    .preview-content p { font-size: 13px; color: #6b6760; line-height: 2; margin-bottom: 16px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .tag { background: #f2ede8; border: 0.5px solid #c8c2bb; padding: 5px 12px; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6b6760; }
+    .form-zone { padding: 56px 56px; background: #f2ede8; }
+    .form-inner { max-width: 540px; margin: 0 auto; }
+    .form-label-top { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #a09a93; margin-bottom: 32px; }
+    .form-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 30px; color: #3a3835; margin-bottom: 36px; line-height: 1.2; }
+    .field { margin-bottom: 20px; }
+    .field label { display: block; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #8a847d; margin-bottom: 8px; }
+    .field input[type="text"], .field input[type="email"] { width: 100%; background: #ffffff; border: 0.5px solid #c8c2bb; padding: 14px 16px; font-family: 'Jost', sans-serif; font-weight: 300; font-size: 14px; color: #3a3835; outline: none; transition: border-color 0.2s; -webkit-appearance: none; border-radius: 0; }
+    .field input:focus { border-color: #8a847d; }
+    .rgpd { margin: 28px 0; display: flex; gap: 14px; align-items: flex-start; }
+    .rgpd input[type="checkbox"] { width: 16px; height: 16px; min-width: 16px; margin-top: 2px; accent-color: #3a3835; cursor: pointer; }
+    .rgpd-text { font-size: 11px; color: #8a847d; line-height: 1.8; }
+    .btn-submit { width: 100%; background: #3a3835; color: #f2ede8; border: none; padding: 18px 24px; font-family: 'Jost', sans-serif; font-weight: 300; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+    .btn-submit:hover { background: #5a5653; }
+    .btn-submit:disabled { background: #c8c2bb; cursor: not-allowed; }
+    .success { display: none; text-align: center; padding: 40px 0; }
+    .success-icon { font-size: 32px; margin-bottom: 20px; }
+    .success h3 { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 26px; color: #3a3835; margin-bottom: 16px; }
+    .success p { font-size: 13px; color: #6b6760; line-height: 1.9; margin-bottom: 28px; }
+    .btn-download { display: inline-block; background: #e0cfc6; color: #3a3835; padding: 16px 32px; font-family: 'Jost', sans-serif; font-weight: 300; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: background 0.2s; }
+    .btn-download:hover { background: #d0bfb6; }
+    @media (max-width: 768px) {
+      .hero-carte { padding: 48px 24px 36px; }
+      .hero-title-carte { font-size: 34px; }
+      .preview-zone { padding: 36px 24px; }
+      .preview-inner { grid-template-columns: 1fr; gap: 36px; }
+      .form-zone { padding: 40px 24px; }
+    }
+  </style>
+
+  <section class="hero-carte">
+    <p class="hero-tag">Ressource · Ostéopathie animale</p>
+    <h1 class="hero-title-carte">La matrice tenségrale<br>de l'identité OA</h1>
+    <p class="hero-intro">Une carte mentale pour nommer ce que vous vivez dans votre pratique. Quatre pôles, des tensions constitutives, aucune à résoudre. À télécharger librement.</p>
+  </section>
+
+  <hr class="line">
+
+  <section class="preview-zone">
+    <div class="preview-inner">
+      <div class="preview-img">
+        <img src="/matrice-tensegrale.svg" alt="Aperçu de la carte mentale — matrice tenségrale">
+        <div class="preview-img-fade"></div>
+      </div>
+      <div class="preview-content">
+        <h2>Ce que contient cette carte</h2>
+        <p>Quatre pôles en tension permanente : l'identité en devenir, la professionnalisation, l'accompagnement, la congruence. Aucun ne se stabilise indépendamment des autres.</p>
+        <p>La carte donne un cadre pour habiter ces tensions sans s'y perdre — et pour les nommer auprès des praticiens qu'on accompagne.</p>
+        <div class="tags">
+          <span class="tag">Identité professionnelle</span>
+          <span class="tag">Tenségrité</span>
+          <span class="tag">Pratique OA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="line">
+
+  <section class="form-zone">
+    <div class="form-inner">
+
+      <div id="form-block">
+        <p class="form-label-top">Téléchargement gratuit</p>
+        <h2 class="form-title">Recevoir la carte<br>en format PDF</h2>
+
+        <form id="lead-form" novalidate>
+          <div class="field">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+          </div>
+          <div class="field">
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.fr" required>
+          </div>
+          <div class="rgpd">
+            <input type="checkbox" id="rgpd" name="rgpd" required>
+            <label for="rgpd" class="rgpd-text">
+              J'accepte de recevoir des communications de Sophie Pouget-Leroy (ressources, actualités, offres de formation). Je peux me désinscrire à tout moment. Données traitées conformément au RGPD.
+            </label>
+          </div>
+          <button type="submit" class="btn-submit" id="btn-submit">
+            Télécharger la carte
+          </button>
+        </form>
+      </div>
+
+      <div class="success" id="success-block">
+        <div class="success-icon">↓</div>
+        <h3 id="success-title">Merci.</h3>
+        <p>Votre téléchargement démarre automatiquement.<br>Si ce n'est pas le cas, cliquez sur le bouton ci-dessous.</p>
+        <a href="/carte-mentale-matrice-tensegrale.pdf" download="Matrice-tensegrale-identite-OA-Sophie-Pouget-Leroy.pdf" class="btn-download">
+          Télécharger la carte (PDF)
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const BREVO_LIST_ID = 2;
+
+    const form = document.getElementById('lead-form');
+    const btn = document.getElementById('btn-submit');
+    const formBlock = document.getElementById('form-block');
+    const successBlock = document.getElementById('success-block');
+    const successTitle = document.getElementById('success-title');
+
+    form?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const prenom = (document.getElementById('prenom') as HTMLInputElement).value.trim();
+      const email = (document.getElementById('email') as HTMLInputElement).value.trim();
+      const rgpd = (document.getElementById('rgpd') as HTMLInputElement).checked;
+
+      if (!prenom || !email || !rgpd) {
+        alert('Merci de remplir tous les champs et d\'accepter les conditions.');
+        return;
+      }
+
+      (btn as HTMLButtonElement).disabled = true;
+      btn!.textContent = 'Envoi en cours…';
+
+      try {
+        const apiKey = import.meta.env.PUBLIC_BREVO_API_KEY;
+        await fetch('https://api.brevo.com/v3/contacts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'api-key': apiKey
+          },
+          body: JSON.stringify({
+            email: email,
+            attributes: { PRENOM: prenom },
+            listIds: [BREVO_LIST_ID],
+            updateEnabled: true
+          })
+        });
+      } catch (err) {
+        console.warn('Brevo inaccessible — téléchargement maintenu.');
+      }
+
+      successTitle!.textContent = 'Merci, ' + prenom + '.';
+      formBlock!.style.display = 'none';
+      successBlock!.style.display = 'block';
+
+      const a = document.createElement('a');
+      a.href = '/carte-mentale-matrice-tensegrale.pdf';
+      a.download = 'Matrice-tensegrale-identite-OA-Sophie-Pouget-Leroy.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+  </script>
+
+</Layout>
