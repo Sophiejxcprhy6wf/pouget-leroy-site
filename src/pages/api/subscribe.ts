@@ -40,9 +40,10 @@ export const POST: APIRoute = async ({ request }) => {
       }),
     });
 
-    if (!brevoRes.ok && brevoRes.status !== 400) {
-      // 400 from Brevo is often "contact already exists" — not a failure for our purposes
+    if (!brevoRes.ok) {
       console.warn('Brevo API error', brevoRes.status, await brevoRes.text());
+    } else {
+      console.log('Brevo OK', brevoRes.status);
     }
   } catch (err) {
     console.warn('Brevo inaccessible', err);
