@@ -121,8 +121,6 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <script>
-    const BREVO_LIST_ID = 2;
-
     const form = document.getElementById('lead-form');
     const btn = document.getElementById('btn-submit');
     const formBlock = document.getElementById('form-block');
@@ -145,22 +143,13 @@ import Layout from '../layouts/Layout.astro';
       btn!.textContent = 'Envoi en cours…';
 
       try {
-        const apiKey = import.meta.env.PUBLIC_BREVO_API_KEY;
-        await fetch('https://api.brevo.com/v3/contacts', {
+        await fetch('/api/subscribe', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'api-key': apiKey
-          },
-          body: JSON.stringify({
-            email: email,
-            attributes: { PRENOM: prenom },
-            listIds: [BREVO_LIST_ID],
-            updateEnabled: true
-          })
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prenom, email, rgpd })
         });
       } catch (err) {
-        console.warn('Brevo inaccessible — téléchargement maintenu.');
+        console.warn('Inscription Brevo inaccessible — téléchargement maintenu.');
       }
 
       successTitle!.textContent = 'Merci, ' + prenom + '.';
