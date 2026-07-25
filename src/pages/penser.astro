@@ -1,5 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { articlesByRubrique } from '../data/articles';
+
+const items = articlesByRubrique('penser');
 ---
 
 <Layout title="Penser — Sophie Pouget-Leroy" description="Essais, prises de position épistémiques, ce qui résiste à la simplification.">
@@ -14,36 +18,7 @@ import Layout from '../layouts/Layout.astro';
   <hr class="line">
 
   <main class="articles-zone">
-    <a href="/articles/ce-qui-na-pas-eu-lieu" class="article-card">
-      <div class="article-img img-penser">
-        <img src="/ce-qui-na-pas-eu-lieu.jpg" alt="Immersion dans un bain d'eau glacée à 4 degrés" style="width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block;">
-      </div>
-      <div>
-        <p class="art-rub">Juillet 2026</p>
-        <h2 class="art-title">Ce qui n'a pas eu lieu</h2>
-        <p class="art-excerpt">Je m'attendais à me battre dans l'eau à 4 degrés. Ce qui ne s'est pas passé m'a appris plus que ce que j'étais venue chercher.</p>
-      </div>
-    </a>
-    <a href="/articles/sommes-nous-des-osteopathes" class="article-card">
-      <div class="article-img img-penser">
-        <img src="/matrice-tensegrale.svg" alt="Carte mentale matrice tenségrale" style="width:100%; height:100%; object-fit:cover; object-position:center; display:block; opacity:0.85;">
-      </div>
-      <div>
-        <p class="art-rub">Juin 2026</p>
-        <h2 class="art-title">Sommes-nous des ostéopathes ?</h2>
-        <p class="art-excerpt">Notre identité professionnelle ne se construit pas malgré les tensions qui la traversent. Elle tient par elles.</p>
-      </div>
-    </a>
-    <a href="/articles/humilite-expert" class="article-card">
-      <div class="article-img img-penser">
-        <img src="/Humilité_expert.jpg" alt="Mains sur un poulain" style="width:100%; height:100%; object-fit:cover; object-position:center 20%; display:block;">
-      </div>
-      <div>
-        <p class="art-rub">Juin 2026</p>
-        <h2 class="art-title">L'humilité de l'expert</h2>
-        <p class="art-excerpt">Quand un praticien aguerri ne trouve plus ses mots. Ce que ce silence révèle sur la construction de nos perceptions.</p>
-      </div>
-    </a>
+    {items.map((article) => <ArticleCard article={article} label="date" />)}
   </main>
 
 </Layout>

@@ -1,5 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { articlesByRubrique } from '../data/articles';
+
+const items = articlesByRubrique('toucher');
 ---
 
 <Layout title="Toucher — Sophie Pouget-Leroy" description="Cas cliniques, observations terrain, ce que les mains savent avant le mot.">
@@ -14,26 +18,7 @@ import Layout from '../layouts/Layout.astro';
   <hr class="line">
 
   <main class="articles-zone">
-    <a href="/articles/dix-sept-virgule-deux" class="article-card">
-      <div class="article-img img-toucher">
-        <img src="/dix-sept-virgule-deux.jpg" alt="Désoperculage d'un cadre au-dessus du bac, récolte de miel 2026" style="width:100%; height:100%; object-fit:cover; object-position:55% 8%; display:block;">
-      </div>
-      <div>
-        <p class="art-rub">Juillet 2026</p>
-        <h2 class="art-title">Dix-sept virgule deux</h2>
-        <p class="art-excerpt">Une récolte de miel après une sécheresse, un couteau, une main qui dose sans y penser. Ce jour-là, quelque chose ne nous était pas dû.</p>
-      </div>
-    </a>
-    <a href="/articles/temps-suspendu" class="article-card">
-      <div class="article-img img-toucher">
-        <img src="/temps-suspendu.jpg" alt="Palpation sans licol" style="width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block;">
-      </div>
-      <div>
-        <p class="art-rub">Juin 2026</p>
-        <h2 class="art-title">Le temps suspendu</h2>
-        <p class="art-excerpt">Une jument de quatre ans, un box, un nid d'hirondelles au-dessus. Ce matin-là, quelque chose s'est dilaté.</p>
-      </div>
-    </a>
+    {items.map((article) => <ArticleCard article={article} label="date" />)}
   </main>
 
 </Layout>
