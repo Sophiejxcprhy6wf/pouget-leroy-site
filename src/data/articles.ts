@@ -17,6 +17,18 @@ export interface Article {
 // piochent dans ce même tableau — plus besoin de dupliquer les cartes à la main.
 export const articles: Article[] = [
   {
+    slug: 'ce-qui-essaime',
+    rubrique: 'Penser',
+    rubriqueClass: 'penser',
+    date: '2026-08-02',
+    dateLabel: 'Août 2026',
+    title: 'Ce qui essaime',
+    excerpt: "Une course avant l'aube, une amie qui doute, et une ruche qui n'a jamais eu besoin de grossir son cœur pour tenir.",
+    image: '/ce-qui-essaime.jpg',
+    alt: 'Ombre projetée sur un chemin de terre, lumière filtrée par les feuilles',
+    objectPosition: 'center 30%',
+  },
+  {
     slug: 'dix-sept-virgule-deux',
     rubrique: 'Toucher',
     rubriqueClass: 'toucher',
