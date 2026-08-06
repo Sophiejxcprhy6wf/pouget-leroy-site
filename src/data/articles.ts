@@ -17,6 +17,18 @@ export interface Article {
 // piochent dans ce même tableau — plus besoin de dupliquer les cartes à la main.
 export const articles: Article[] = [
   {
+    slug: 'nuvole-bianche',
+    rubrique: 'Résonances',
+    rubriqueClass: 'resonances',
+    date: '2026-08-06',
+    dateLabel: 'Août 2026',
+    title: 'Nuvole Bianche',
+    excerpt: "Un paysage sec sous la lumière, une musique déjà là sans qu'on l'écoute. Ce qui se croise sans se choisir.",
+    image: '/nuvole-bianche.jpg',
+    alt: 'Lever de soleil sur la vallée du Haras du Pin',
+    objectPosition: 'center 55%',
+  },
+  {
     slug: 'ce-qui-essaime',
     rubrique: 'Penser',
     rubriqueClass: 'penser',
